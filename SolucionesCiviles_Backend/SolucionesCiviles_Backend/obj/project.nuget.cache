@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AbgERxLtbNm1oJ3IbJIDiEp9wX6HuBvpD6hzdaLrfTOb0z6uFQzcP4F2x/cMqDwDy4Baz0NPDIef8fBCeOJ6dA==",
+  "dgSpecHash": "Mlr6x9mG1agX58J3h2tP2IDV+rrUJNgZMk7OH6OrnaFKYdoiW4hoLsU5dLrQaJCDQDgaQdcGqtkYU5miVE5q7Q==",
   "success": true,
-  "projectFilePath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles - Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+  "projectFilePath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Facu\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

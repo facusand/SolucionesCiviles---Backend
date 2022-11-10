@@ -429,11 +429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles - Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+      "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
       "projectName": "SolucionesCiviles_Backend",
-      "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles - Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+      "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
       "packagesPath": "C:\\Users\\Facu\\.nuget\\packages\\",
-      "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles - Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\obj\\",
+      "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\Nueva carpeta\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

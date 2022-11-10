@@ -2,6 +2,7 @@ global using SolucionesCiviles_Backend.Services.EmailService;
 global using SolucionesCiviles_Backend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+string SCivilesPolicy = "SCivilesPolicy";
 
 // Add services to the container.
 /*
@@ -14,8 +15,7 @@ builder.Services.AddCors(options =>
         });
 });*/
 
-//builder.Services.AddCors(options => options.AddPolicy("AllowAnyOrigin", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
-builder.Services.AddCors();
+builder.Services.AddCors(options => options.AddPolicy(name: SCivilesPolicy, builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
 
 builder.Services.AddControllers();
@@ -37,10 +37,12 @@ app.UseHttpsRedirection();
 
 //app.UseCors("AllowAnyOrigin");
 
-app.UseCors(options =>
+/*app.UseCors(options =>
     options.WithOrigins("http://localhost:4200")
     .AllowAnyMethod()
-    .AllowAnyHeader());
+    .AllowAnyHeader());*/
+
+app.UseCors(SCivilesPolicy);
 
 app.UseAuthorization();
 
