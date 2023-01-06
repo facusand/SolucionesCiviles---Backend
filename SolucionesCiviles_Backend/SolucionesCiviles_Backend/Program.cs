@@ -1,5 +1,11 @@
 global using SolucionesCiviles_Backend.Services.EmailService;
+global using SolucionesCiviles_Backend.Services.TrabajoService;
+global using SolucionesCiviles_Backend.Services.FileService;
 global using SolucionesCiviles_Backend.Models;
+global using DB;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 string SCivilesPolicy = "SCivilesPolicy";
@@ -23,8 +29,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ITrabajoService, TrabajoService>();
+builder.Services.AddScoped<IFileService, FileService>();
+
+builder.Services.AddDbContext<SolucionesContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
+});
 
 var app = builder.Build();
+
+/* ************ESTO CREA LA BASE DE DATOS SI AUN NO EXISTE. SI YA ESTA CREADA, COMENTAR ******
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<SolucionesContext>();
+    context.Database.Migrate();
+}*/
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -34,7 +54,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, "Resources")),
+    RequestPath = "/Resources"
+});
 //app.UseCors("AllowAnyOrigin");
 
 /*app.UseCors(options =>
