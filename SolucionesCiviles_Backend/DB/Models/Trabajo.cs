@@ -15,5 +15,6 @@ namespace DB.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public List<TrabajoImage> trabajoImages { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

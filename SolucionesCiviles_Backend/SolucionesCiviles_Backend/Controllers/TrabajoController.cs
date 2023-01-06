@@ -55,12 +55,43 @@ namespace SolucionesCiviles_Backend.Controllers
             }     
         }
 
-        /*
-        [HttpGet("all")]
-        public async Task<IActionResult> ListAll()
+        [HttpDelete("delete/{id}")]
+        public IActionResult Delete(int id)
         {
-            var trabajos = await _context.Trabajos.ToListAsync();
-            return Ok(trabajos);
-        }*/
+            try
+            {
+                _trabajoService.Delete(id);
+                
+                return Ok(new { HttpStatusCode.Accepted, message = "Eliminado con éxito" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ocurrión un error al eliminar. {ex.Message}");
+            }
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update([FromForm] TrabajoDto dto)
+        {
+            try
+            {
+                var files = Request.Form.Files;
+                if (dto == null)
+                    return BadRequest("Datos invalidos");
+
+                if (files.Count > 0)
+                {
+                    dto.Images = files;
+                }
+
+                _trabajoService.Update(dto);
+
+                return Ok(new { HttpStatusCode.Accepted, message = "Actualizado con éxito" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ocurrió un error en la actualización. {ex.Message}");
+            }
+        }
     }
 }

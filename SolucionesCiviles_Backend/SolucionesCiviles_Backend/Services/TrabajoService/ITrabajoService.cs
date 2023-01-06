@@ -8,5 +8,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
     {
         Task<List<TrabajoDto>> GetAll();
         void Add(TrabajoDto trabajo);
+        void Delete(int id);
+        void Update(TrabajoDto dto);
     }
 }
