@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using SolucionesCiviles_Backend.DTOs;
 using System.Net;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SolucionesCiviles_Backend.Controllers
 {
@@ -31,6 +32,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult AddTrabajo([FromForm] TrabajoDto dto)
         {
             try
@@ -56,6 +58,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpDelete("delete/{id}")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult Delete(int id)
         {
             try
@@ -71,6 +74,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("update")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult Update([FromForm] TrabajoDto dto)
         {
             try

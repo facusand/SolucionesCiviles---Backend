@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VO+ZB8lSsFCg3++xKuHdj0TeSI7f1b1wiWXX9Ab3wBSHMbWVCZbFHNcOKn2Sx/sQT/KNT9TavbDYMpghI920uA==",
+  "dgSpecHash": "MVbWwF/pLmlTYo87EBiPUstQw7Y/ELFjemYFLcB5KtBoCz3tIMU9717dOx8Hj741KkNosX7kt0qo+3wF1dGtGA==",
   "success": true,
   "projectFilePath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Facu\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
+    "C:\\Users\\Facu\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

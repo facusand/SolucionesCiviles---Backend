@@ -145,3 +145,4 @@ F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\Solucione
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\SolucionesCiviles_Backend\obj\Debug\net6.0\SolucionesCiviles_Backend.pdb
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\SolucionesCiviles_Backend\obj\Debug\net6.0\SolucionesCiviles_Backend.genruntimeconfig.cache
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\SolucionesCiviles_Backend\obj\Debug\net6.0\ref\SolucionesCiviles_Backend.dll
+F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\SolucionesCiviles_Backend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

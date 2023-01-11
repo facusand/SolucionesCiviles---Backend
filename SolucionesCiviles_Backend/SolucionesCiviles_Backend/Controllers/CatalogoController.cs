@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SolucionesCiviles_Backend.DTOs;
 using SolucionesCiviles_Backend.Services.CatalogoService;
@@ -27,6 +28,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult AddCatalogo([FromForm] CatalogoDto dto)
         {
             try
@@ -46,6 +48,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpDelete("delete/{id}")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult Delete(int id)
         {
             try
@@ -61,6 +64,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("update")]
+        [Authorize(Roles = ("admin"))]
         public IActionResult Update([FromForm] CatalogoDto dto)
         {
             try
