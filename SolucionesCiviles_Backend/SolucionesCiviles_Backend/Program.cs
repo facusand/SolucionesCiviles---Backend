@@ -10,6 +10,7 @@ using SolucionesCiviles_Backend.Handlers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SolucionesCiviles_Backend.Services.CatalogoService;
 
 var builder = WebApplication.CreateBuilder(args);
 string SCivilesPolicy = "SCivilesPolicy";
@@ -52,6 +53,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ITrabajoService, TrabajoService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<ICatalogoService, CatalogoService>();
 builder.Services.AddTransient<JwtHandler>();
 
 builder.Services.AddDbContext<SolucionesContext>(options =>

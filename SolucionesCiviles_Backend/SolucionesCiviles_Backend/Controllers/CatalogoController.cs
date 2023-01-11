@@ -28,7 +28,7 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("create")]
-        [Authorize(Roles = ("admin"))]
+        //[Authorize(Roles = ("admin"))]
         public IActionResult AddCatalogo([FromForm] CatalogoDto dto)
         {
             try
