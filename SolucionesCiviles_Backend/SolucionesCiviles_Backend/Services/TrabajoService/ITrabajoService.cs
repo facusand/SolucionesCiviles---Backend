@@ -10,5 +10,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
         void Add(TrabajoDto trabajo);
         void Delete(int id);
         void Update(TrabajoDto dto);
+
+        TrabajoDto GetById(int id);
     }
 }

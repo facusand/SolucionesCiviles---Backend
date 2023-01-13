@@ -31,6 +31,17 @@ namespace SolucionesCiviles_Backend.Controllers
             return Ok(trabajos);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var trabajo = _trabajoService.GetById(id);
+
+            if (trabajo == null)
+                return NotFound();
+
+            return Ok(trabajo);
+        }
+
         [HttpPost("create")]
         [Authorize(Roles = ("admin"))]
         public IActionResult AddTrabajo([FromForm] TrabajoDto dto)

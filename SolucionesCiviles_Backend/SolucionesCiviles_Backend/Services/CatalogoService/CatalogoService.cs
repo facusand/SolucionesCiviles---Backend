@@ -26,6 +26,7 @@ namespace SolucionesCiviles_Backend.Services.CatalogoService
                 Id = x.Id,
                 Name = x.Name,
                 Link = x.Link,
+                IsDeleted = x.IsDeleted,
             }).ToList();
 
             return catalogoDto;
@@ -36,8 +37,8 @@ namespace SolucionesCiviles_Backend.Services.CatalogoService
             var cat = new Catalogo
             {
                 Name = dto.Name,
-                Link = dto.Link
-
+                Link = dto.Link,
+                IsDeleted = false
             };
             _context.Catalogos.Add(cat);
             _context.SaveChanges();

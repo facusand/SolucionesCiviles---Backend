@@ -49,6 +49,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
             {
                 Name = dto.Name,
                 Description = dto.Description,
+                IsDeleted= false,
                
             };
             if (dto.Images != null)
@@ -108,6 +109,27 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
 
             _context.Trabajos.Update(trabajo);
             _context.SaveChanges();
+        }
+
+        public TrabajoDto GetById(int id)
+        {
+            var trabajo = _context.Trabajos.Include(ti => ti.trabajoImages).ThenInclude(x => x.Image).FirstOrDefault(t => t.Id == id);
+
+            var trabajoDto =  new TrabajoDto
+            {
+                Id = trabajo.Id,
+                Name = trabajo.Name,
+                Description = trabajo.Description,
+                IsDeleted = trabajo.IsDeleted,
+                ImagesDto = trabajo.trabajoImages.Select(x => new ImageDto
+                {
+                    Id = x.Image.Id,
+                    FileName = x.Image.FileName,
+                    Path = _fileService.GetPathImages(x.Image.FileName)
+                }).ToList()
+            };
+
+            return trabajoDto;
         }
     }
 }
