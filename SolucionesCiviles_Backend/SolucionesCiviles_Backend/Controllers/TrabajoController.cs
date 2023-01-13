@@ -74,7 +74,6 @@ namespace SolucionesCiviles_Backend.Controllers
         }
 
         [HttpPost("update")]
-        [Authorize(Roles = ("admin"))]
         public IActionResult Update([FromForm] TrabajoDto dto)
         {
             try

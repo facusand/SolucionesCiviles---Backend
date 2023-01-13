@@ -32,6 +32,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
                 Id= x.Id,
                 Name = x.Name,
                 Description = x.Description,
+                IsDeleted = x.IsDeleted,
                 ImagesDto = x.trabajoImages.Select(x=> new ImageDto { 
                     Id = x.Image.Id,
                     FileName = x.Image.FileName,
@@ -91,6 +92,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
 
             trabajo.Name = dto.Name;
             trabajo.Description = dto.Description;
+            trabajo.IsDeleted = dto.IsDeleted;
 
             if (dto.Images != null)
             {
