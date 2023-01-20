@@ -87,6 +87,7 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
                 throw new Exception("Datos inválidos");
 
             var trabajo = _context.Trabajos.Find(dto.Id);
+            var trab = _context.Trabajos.Include(ti => ti.trabajoImages).ThenInclude(x => x.Image).FirstOrDefault(t => t.Id == dto.Id);
 
             if (trabajo == null)
                 throw new Exception($"No se encontró el trabajo con id {dto.Id}");
@@ -105,6 +106,52 @@ namespace SolucionesCiviles_Backend.Services.TrabajoService
                 }
 
                 trabajo.trabajoImages = imageList;
+            }
+
+            _context.Trabajos.Update(trabajo);
+            _context.SaveChanges();
+        }
+
+        public void UpdateWithDeletedImages(TrabajoDto dto)
+        {
+            if (dto == null)
+                throw new Exception("Datos inválidos");
+
+            var trabajo = _context.Trabajos.Include(ti => ti.trabajoImages).ThenInclude(x => x.Image).FirstOrDefault(t => t.Id == dto.Id);
+
+            if (trabajo == null)
+                throw new Exception($"No se encontró el trabajo con id {dto.Id}");
+
+            trabajo.Name = dto.Name;
+            trabajo.Description = dto.Description;
+            trabajo.IsDeleted = dto.IsDeleted;
+
+            if (dto.Images != null)
+            {
+                var allTrabajoImages = trabajo.trabajoImages;
+                var imageList = new List<TrabajoImage>();
+                foreach (var image in dto.Images)
+                {
+                    var fileName = _fileService.SaveImage(image);
+                    imageList.Add(new TrabajoImage { Trabajo = trabajo, Image = new Image { FileName = fileName } });
+                    allTrabajoImages.Add(new TrabajoImage { Trabajo = trabajo, Image = new Image { FileName = fileName } });
+                }
+
+
+                trabajo.trabajoImages = allTrabajoImages;
+            }
+
+            //Se eliminan las imagenes que el usuario eliminó desde la web (se borran los registros de las tablas Image y TrabajoImage)
+            if (dto.DeletedImages != null)
+            {
+                
+                foreach (var imageId in dto.DeletedImages)
+                {
+                    var img = _context.Images.Find(imageId);
+                    _context.Images.Remove(img);
+                    var trabImg = _context.TrabajosImages.Find(imageId);
+                    _context.TrabajosImages.Remove(trabImg);
+                }    
             }
 
             _context.Trabajos.Update(trabajo);

@@ -107,5 +107,29 @@ namespace SolucionesCiviles_Backend.Controllers
                 return BadRequest($"Ocurrió un error en la actualización. {ex.Message}");
             }
         }
+
+        [HttpPost("updateWithDeletedImages")]
+        public IActionResult UpdateWithDeletedImages([FromForm] TrabajoDto dto)
+        {
+            try
+            {
+                var files = Request.Form.Files;
+                if (dto == null)
+                    return BadRequest("Datos invalidos");
+
+                if (files.Count > 0)
+                {
+                    dto.Images = files;
+                }
+
+                _trabajoService.UpdateWithDeletedImages(dto);
+
+                return Ok(new { HttpStatusCode.Accepted, message = "Actualizado con éxito" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ocurrió un error en la actualización. {ex.Message}");
+            }
+        }
     }
 }

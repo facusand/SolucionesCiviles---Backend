@@ -69,7 +69,7 @@ namespace SolucionesCiviles_Backend.Services.CatalogoService
 
             catalogo.Name = dto.Name;
             catalogo.Link = dto.Link;
-
+            catalogo.IsDeleted = dto.IsDeleted;
             _context.Catalogos.Update(catalogo);
             _context.SaveChanges();
         }
