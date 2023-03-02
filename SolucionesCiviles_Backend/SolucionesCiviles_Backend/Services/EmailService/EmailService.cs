@@ -17,22 +17,40 @@ namespace SolucionesCiviles_Backend.Services.EmailService
         public void SendEmail(EmailDto request)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
+            //email.From.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
+            email.From.Add(MailboxAddress.Parse(request.UserEmail));
             email.To.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
-            email.Subject = "Message from a visitor";
+            email.Subject = "Mensaje de un visitante";
 
             var builder = new BodyBuilder();
 
             // Set the plain-text version of the message text
-            builder.HtmlBody = "<P>Nombre de usuario: "+request.Name 
-                                + "<br> <br>Email del usuario: " + request.UserEmail 
-                                +"<br> <br> Mensaje: " + request.Body;
-            email.Body = builder.ToMessageBody();
-
-            //email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
+            email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
 
             using var smtp = new SmtpClient();
-            smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            //smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Connect(_config.GetSection("EmailHost").Value, 465, SecureSocketOptions.SslOnConnect);
+            smtp.Authenticate(_config.GetSection("EmailUsername").Value, _config.GetSection("EmailPassword").Value);
+            smtp.Send(email);
+            smtp.Disconnect(true);
+        }
+
+        public void SendOpinion(EmailDto request)
+        {
+            var email = new MimeMessage();
+            //email.From.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
+            email.From.Add(MailboxAddress.Parse(request.UserEmail));
+            email.To.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
+            email.Subject = "Opinión sobre revista";
+
+            var builder = new BodyBuilder();
+
+            // Set the plain-text version of the message text
+            email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
+
+            using var smtp = new SmtpClient();
+            //smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Connect(_config.GetSection("EmailHost").Value, 465, SecureSocketOptions.SslOnConnect);
             smtp.Authenticate(_config.GetSection("EmailUsername").Value, _config.GetSection("EmailPassword").Value);
             smtp.Send(email);
             smtp.Disconnect(true);

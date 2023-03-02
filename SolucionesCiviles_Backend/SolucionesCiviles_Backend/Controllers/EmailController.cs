@@ -25,5 +25,12 @@ namespace SolucionesCiviles_Backend.Controllers
             _emailService.SendEmail(request);
             return Ok();
         }
+
+        [HttpPost("opinion")]
+        public IActionResult SendOpinion(EmailDto request)
+        {
+            _emailService.SendOpinion(request);
+            return Ok();
+        }
     }
 }

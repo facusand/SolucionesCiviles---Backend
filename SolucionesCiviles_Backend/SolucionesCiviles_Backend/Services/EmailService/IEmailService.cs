@@ -3,5 +3,7 @@
     public interface IEmailService
     {
         void SendEmail(EmailDto request);
+
+        void SendOpinion(EmailDto request);
     }
 }
