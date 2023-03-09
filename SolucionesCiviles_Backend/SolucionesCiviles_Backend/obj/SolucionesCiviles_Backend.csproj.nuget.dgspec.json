@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj": {}
+    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj": {}
   },
   "projects": {
-    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj": {
+    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj",
+        "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj",
         "projectName": "DB",
-        "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj",
+        "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj",
         "packagesPath": "C:\\Users\\Facu\\.nuget\\packages\\",
-        "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\obj\\",
+        "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,14 +74,14 @@
         }
       }
     },
-    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj": {
+    "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+        "projectUniqueName": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
         "projectName": "SolucionesCiviles_Backend",
-        "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+        "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
         "packagesPath": "C:\\Users\\Facu\\.nuget\\packages\\",
-        "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\obj\\",
+        "outputPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -102,8 +102,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj": {
-                "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj"
+              "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj": {
+                "projectPath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\DB\\DB.csproj"
               }
             }
           }

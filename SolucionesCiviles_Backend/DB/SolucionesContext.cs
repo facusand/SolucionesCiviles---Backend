@@ -15,6 +15,7 @@ namespace DB
         public DbSet<TrabajoImage> TrabajosImages { get; set; }
         public DbSet<Catalogo> Catalogos { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<PubliImage> PubliImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +24,7 @@ namespace DB
             modelBuilder.Entity<TrabajoImage>().ToTable("TrabajoImage");
             modelBuilder.Entity<Catalogo>().ToTable("Catalogo");
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<PubliImage>().ToTable("PubliImage");
         }
 
     }

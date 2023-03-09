@@ -2,43 +2,38 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SolucionesCiviles_Backend.DTOs;
-using SolucionesCiviles_Backend.Services.CatalogoService;
+using SolucionesCiviles_Backend.Services.PubliImageService;
 using System.Net;
 
 namespace SolucionesCiviles_Backend.Controllers
 {
-    [Route("api/catalogo")]
+    [Route("api/publiImage")]
     [ApiController]
-    public class CatalogoController : ControllerBase
+    public class PubliImageController : ControllerBase
     {
-        private readonly ICatalogoService _catalogoService;
-        private readonly SolucionesContext _context;
+        private readonly IPubliImageService _PubliImageService;
 
-        public CatalogoController(ICatalogoService catalogoService, SolucionesContext context)
+        public PubliImageController(IPubliImageService publiImage, SolucionesContext context)
         {
-            _catalogoService = catalogoService;
-            _context = context;
-        }
-
-        [HttpGet("list")]
-        public async Task<IActionResult> List()
-        {
-            var catalogos = await _catalogoService.GetAll();
-            return Ok(catalogos);
+            _PubliImageService = publiImage;
         }
 
         [HttpPost("create")]
         [Authorize(Roles = ("admin"))]
-        public IActionResult AddCatalogo([FromForm] CatalogoDto dto)
+        public IActionResult AddPublicidad([FromForm] PubliImageDto dto)
         {
             try
             {
                 if (dto == null)
                     return BadRequest("Datos invalidos");
 
-                _catalogoService.Add(dto);
-                //await _context.Trabajos.AddAsync(trabajo);
-                //await _context.SaveChangesAsync();
+                var files = Request.Form.Files;
+                if (files.Count == 0) // verificar si hay archivos en la solicitud
+                    return BadRequest("No se ha adjuntado ningún archivo");
+
+                dto.Image = files;
+
+                _PubliImageService.Add(dto);
                 return Ok(new { HttpStatusCode.Created, message = "Creado con éxito" });
             }
             catch (Exception ex)
@@ -47,13 +42,20 @@ namespace SolucionesCiviles_Backend.Controllers
             }
         }
 
+        [HttpGet("list")]
+        public async Task<IActionResult> List()
+        {
+            var publiImages= await _PubliImageService.GetAll();
+            return Ok(publiImages);
+        }
+
         [HttpDelete("delete/{id}")]
         [Authorize(Roles = ("admin"))]
         public IActionResult Delete(int id)
         {
             try
             {
-                _catalogoService.Delete(id);
+                _PubliImageService.Delete(id);
 
                 return Ok(new { HttpStatusCode.Accepted, message = "Eliminado con éxito" });
             }
@@ -65,12 +67,12 @@ namespace SolucionesCiviles_Backend.Controllers
 
         [HttpPost("update")]
         [Authorize(Roles = ("admin"))]
-        public IActionResult Update([FromForm] CatalogoDto dto)
+        public IActionResult Update([FromForm] PubliImageDto dto)
         {
             try
             {
 
-                _catalogoService.Update(dto);
+                _PubliImageService.Update(dto);
 
                 return Ok(new { HttpStatusCode.Accepted, message = "Actualizado con éxito" });
             }

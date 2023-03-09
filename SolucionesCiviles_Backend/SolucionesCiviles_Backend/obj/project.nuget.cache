@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MVbWwF/pLmlTYo87EBiPUstQw7Y/ELFjemYFLcB5KtBoCz3tIMU9717dOx8Hj741KkNosX7kt0qo+3wF1dGtGA==",
+  "dgSpecHash": "WDUM6kVx3w7IhIPBMAeejy3CQaHc0/sMsitve4lMrYv6BYMlBzUuIfUm5psAsiT17in65Wd0Q5gP2umZecIlBQ==",
   "success": true,
-  "projectFilePath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\SolucionesCiviles-Backend\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
+  "projectFilePath": "F:\\Programacion\\Proyectos\\Soluciones Civiles\\EN HOSTING\\Back\\SolucionesCiviles---Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend\\SolucionesCiviles_Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Facu\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Facu\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

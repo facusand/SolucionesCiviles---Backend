@@ -1,6 +1,7 @@
 global using SolucionesCiviles_Backend.Services.EmailService;
 global using SolucionesCiviles_Backend.Services.TrabajoService;
 global using SolucionesCiviles_Backend.Services.FileService;
+global using SolucionesCiviles_Backend.Services.PubliImageService;
 global using SolucionesCiviles_Backend.Models;
 global using DB;
 using Microsoft.Extensions.FileProviders;
@@ -54,6 +55,7 @@ builder.Services.AddScoped<ITrabajoService, TrabajoService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<ICatalogoService, CatalogoService>();
+builder.Services.AddScoped<IPubliImageService, PubliImageService>();
 builder.Services.AddTransient<JwtHandler>();
 
 builder.Services.AddDbContext<SolucionesContext>(options =>

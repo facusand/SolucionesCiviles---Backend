@@ -12,3 +12,17 @@ F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\Solucione
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.pdb
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.genruntimeconfig.cache
 F:\Programacion\Proyectos\Soluciones Civiles\SolucionesCiviles-Backend\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\ref\DB.dll
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\bin\Debug\net6.0\DB.deps.json
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\bin\Debug\net6.0\DB.runtimeconfig.json
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\bin\Debug\net6.0\DB.dll
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\bin\Debug\net6.0\DB.pdb
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.csproj.AssemblyReference.cache
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.AssemblyInfoInputs.cache
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.AssemblyInfo.cs
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.csproj.CoreCompileInputs.cache
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.dll
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\refint\DB.dll
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.pdb
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\DB.genruntimeconfig.cache
+F:\Programacion\Proyectos\Soluciones Civiles\EN HOSTING\Back\SolucionesCiviles---Backend\SolucionesCiviles_Backend\DB\obj\Debug\net6.0\ref\DB.dll
