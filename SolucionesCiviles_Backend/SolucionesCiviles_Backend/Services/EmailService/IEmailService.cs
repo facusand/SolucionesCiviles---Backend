@@ -1,4 +1,6 @@
-﻿namespace SolucionesCiviles_Backend.Services.EmailService
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace SolucionesCiviles_Backend.Services.EmailService
 {
     public interface IEmailService
     {

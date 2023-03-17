@@ -22,15 +22,31 @@ namespace SolucionesCiviles_Backend.Controllers
         [HttpPost]
         public IActionResult SendEmail(EmailDto request)
         {
-            _emailService.SendEmail(request);
-            return Ok();
+            try
+            {
+                _emailService.SendEmail(request);
+                return Ok(new { message = "Mensaje enviado!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error al enviar el mensaje: " + ex.Message);
+            }
+            
         }
 
         [HttpPost("opinion")]
         public IActionResult SendOpinion(EmailDto request)
         {
-            _emailService.SendOpinion(request);
-            return Ok();
+            try
+            {
+                _emailService.SendOpinion(request);
+                return Ok(new { message = "Mensaje enviado!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error al enviar el mensaje: " + ex.Message);
+            }
+            
         }
     }
 }
